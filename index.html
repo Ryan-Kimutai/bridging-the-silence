@@ -15,7 +15,109 @@
   </header>
 
   <main>
-    <h1 style="padding: 80px 24px; text-align:center;">Homepage content goes here</h1>
+
+    <!-- ===== HERO (dark) ===== -->
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <p class="hero-eyebrow">Mental Health · Stories · Community</p>
+          <h1 class="hero-headline">Bridging<br>the Silence</h1>
+          <p class="hero-tagline">A space where your story realises its weight.</p>
+          <div class="hero-buttons">
+            <a href="https://open.spotify.com/episode/6wnVfpzCi5LqYOqnROUYjT" target="_blank" rel="noopener" class="btn btn-spotify">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+              Listen on Spotify
+            </a>
+            <a href="https://www.youtube.com/watch?v=WlgZwu8RnKw" target="_blank" rel="noopener" class="btn btn-youtube">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              Watch on YouTube
+            </a>
+          </div>
+        </div>
+        <div class="hero-portrait">
+          <div class="portrait-frame">
+            <!-- Replace with: <img src="assets/images/host-portrait.jpg" alt="Host of Bridging the Silence"> -->
+            <img src="assets/images/host potrait.webp" alt="Host of Bridging the Silence">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== LATEST EPISODE (light) ===== -->
+    <section class="latest-episode">
+      <div class="section-inner">
+        <p class="section-eyebrow">Latest Episode</p>
+        <h2 class="section-heading">Episode 1</h2>
+        <p class="episode-desc">The first conversation — an honest look at what it means to carry something heavy, and why breaking the silence matters.</p>
+
+        <div class="embed-tabs">
+          <button class="embed-tab active" data-target="embed-youtube">▶ YouTube</button>
+          <button class="embed-tab" data-target="embed-spotify">♫ Spotify</button>
+        </div>
+
+        <div class="embed-container" id="embed-youtube">
+          <iframe
+            src="https://www.youtube.com/embed/WlgZwu8RnKw"
+            title="Bridging the Silence — Episode 1"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <div class="embed-container hidden" id="embed-spotify">
+          <iframe
+            src="https://open.spotify.com/embed/episode/6wnVfpzCi5LqYOqnROUYjT"
+            title="Bridging the Silence — Episode 1 on Spotify"
+            frameborder="0"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy">
+          </iframe>
+        </div>
+
+        <a href="episodes.html" class="btn btn-outline-dark">All Episodes →</a>
+      </div>
+    </section>
+
+    <!-- ===== MISSION (dark) ===== -->
+    <section class="mission">
+      <div class="section-inner">
+        <p class="section-eyebrow light">What We Stand For</p>
+        <h2 class="section-heading light">Three things that shape every conversation.</h2>
+        <div class="pillars">
+          <div class="pillar">
+            <span class="pillar-icon">◎</span>
+            <h3>Specificity</h3>
+            <p>We're not interested in defining mental health for the hundredth time. We'd rather sit with one specific moment, one specific thought, because that's usually where something actually shifts.</p>
+          </div>
+          <div class="pillar">
+            <span class="pillar-icon">◎</span>
+            <h3>Perspective</h3>
+            <p>Two people can come from the same pain and still tell completely different stories. We make room for both sides of a hard conversation, without forcing either one to be wrong.</p>
+          </div>
+          <div class="pillar">
+            <span class="pillar-icon">◎</span>
+            <h3>Access</h3>
+            <p>Good support shouldn't depend on where you live or what you can afford. We want these conversations to reach you, wherever you are and whatever you're going through.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== NEWSLETTER (light) ===== -->
+    <section class="newsletter">
+      <div class="section-inner newsletter-inner">
+        <p class="section-eyebrow">Stay Connected</p>
+        <h2 class="section-heading">New episode?<br>You'll hear first.</h2>
+        <p class="newsletter-sub">No noise. Just a note when something new drops.</p>
+        <form class="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
+          <input type="email" name="email" placeholder="your@email.com" required aria-label="Email address">
+          <button type="submit" class="btn btn-amber">Subscribe</button>
+        </form>
+        <p class="newsletter-note" id="newsletter-msg" aria-live="polite"></p>
+      </div>
+    </section>
+
   </main>
 
   <footer class="site-footer">

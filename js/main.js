@@ -29,3 +29,57 @@ async function includeHTML(placeholderId, filePath) {
       if (link.getAttribute('href') === currentPage) link.classList.add('active');
     });
   });
+// ---------- Embed tab switcher ----------
+document.addEventListener('click', e => {
+  if (!e.target.matches('.embed-tab')) return;
+  const target = e.target.dataset.target;
+  document.querySelectorAll('.embed-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.embed-container').forEach(c => c.classList.add('hidden'));
+  e.target.classList.add('active');
+  document.getElementById(target)?.classList.remove('hidden');
+});
+
+// ---------- Newsletter form ----------
+function handleNewsletterSubmit(e) {
+  e.preventDefault();
+  const msg = document.getElementById('newsletter-msg');
+  msg.textContent = "You're on the list — thank you!";
+  e.target.reset();
+}
+
+// ---------- Generic Formspree AJAX submit handler ----------
+async function handleFormSubmit(event, messageElementId) {
+  event.preventDefault();
+  const form = event.target;
+  const msgEl = document.getElementById(messageElementId);
+  const submitBtn = form.querySelector('button[type="submit"]');
+  const originalText = submitBtn.textContent;
+
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Sending...';
+  msgEl.className = 'form-note';
+  msgEl.textContent = '';
+
+  try {
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      msgEl.textContent = "Thank you — your message has been sent. We'll be in touch soon.";
+      msgEl.classList.add('form-success');
+      form.reset();
+    } else {
+      msgEl.textContent = 'Something went wrong. Please try again or email us directly.';
+      msgEl.classList.add('form-error');
+    }
+  } catch (error) {
+    msgEl.textContent = 'Something went wrong. Please check your connection and try again.';
+    msgEl.classList.add('form-error');
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = originalText;
+  }
+}
