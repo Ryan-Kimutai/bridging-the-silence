@@ -1,9 +1,15 @@
 async function includeHTML(placeholderId, filePath) {
-    const placeholder = document.getElementById(placeholderId);
-    if (!placeholder) return;
-    const response = await fetch(filePath);
-    placeholder.innerHTML = await response.text();
-  }
+  const placeholder = document.getElementById(placeholderId);
+  if (!placeholder) return;
+
+  const response = await fetch(filePath);
+  const text = await response.text();
+
+  const template = document.createElement("template");
+  template.innerHTML = text;
+
+  placeholder.replaceWith(template.content);
+}
   
   document.addEventListener('DOMContentLoaded', async () => {
     await includeHTML('navbar-placeholder', 'partials/navbar.html');
