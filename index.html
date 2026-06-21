@@ -113,14 +113,19 @@
         <p class="section-eyebrow">Stay Connected</p>
         <h2 class="section-heading">New episode?<br>You'll hear first.</h2>
         <p class="newsletter-sub">No noise. Just a note when something new drops.</p>
-        <form class="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
-          <input type="email" name="email" placeholder="your@email.com" required aria-label="Email address">
-          <button type="submit" class="btn btn-amber">Subscribe</button>
+        <form action="https://gmail.us13.list-manage.com/subscribe/post?u=a980f9bf4da71e1deb21891a4&amp;id=1b3b021ff0&amp;f_id=00dc88e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="newsletter-form" target="_blank" novalidate>
+          <input type="email" name="EMAIL" placeholder="your@email.com" required aria-label="Email address">
+
+          <!-- Mailchimp's spam-bot trap — leave exactly as given, just hidden -->
+          <div style="position: absolute; left: -5000px;" aria-hidden="true">
+            <input type="text" name="b_a980f9bf4da71e1deb21891a4_1b3b021ff0" tabindex="-1" value="">
+          </div>
+
+          <button type="submit" name="subscribe" class="btn btn-amber">Subscribe</button>
         </form>
-        <p class="newsletter-note" id="newsletter-msg" aria-live="polite"></p>
+        <p class="newsletter-note">You'll be taken to a quick confirmation page in a new tab.</p>
       </div>
     </section>
-
   </main>
 
   <footer class="site-footer">
