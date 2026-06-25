@@ -1,19 +1,30 @@
 <div class="header-inner">
-    <a href="index.html" class="logo-link">
-      <img src="assets/images/logo.png" alt="Bridging the Silence Podcast" class="logo-img">
-    </a>
-  
-    <nav class="main-nav" id="main-nav">
-      <a href="index.html">Home</a>
-      <a href="episodes.html">Episodes</a>
-      <a href="about.html">About</a>
-      <a href="resources.html">Resources</a>
-      <a href="events.html">Exhibition</a>
-      <a href="guest.html">Be a Guest</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  
-    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
+  <a href="index.html" class="logo-link">
+    <img src="assets/images/logo.png" alt="Bridging the Silence Podcast" class="logo-img">
+  </a>
+
+  <nav class="main-nav" id="main-nav">
+    <a href="index.html">Home</a>
+    <a href="episodes.html">Episodes</a>
+    <a href="about.html">About</a>
+    <a href="resources.html">Resources</a>
+    <a href="events.html">Exhibition</a>
+
+    <div class="nav-dropdown">
+      <button class="nav-dropdown-trigger" aria-expanded="false">
+        More
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </button>
+      <div class="nav-dropdown-menu">
+        <a href="guest.html">Be a Guest</a>
+        <a href="featured-guests.html">Featured Guests</a>
+        <a href="merch.html">Merch</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</div>

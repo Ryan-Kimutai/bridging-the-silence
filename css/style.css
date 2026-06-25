@@ -83,6 +83,8 @@
   }
   
   .nav-toggle {
+    -webkit-appearance: none;
+    appearance: none;
     display: none;
     flex-direction: column;
     justify-content: center;
@@ -93,8 +95,8 @@
     border: none;
     cursor: pointer;
   }
-  
   .nav-toggle span {
+    flex-shrink: 0;
     display: block;
     height: 2px;
     background-color: #ffffff;
@@ -174,6 +176,21 @@
     font-size: 13px;
     color: #999999;
   }
+
+  .footer-credit {
+    font-size: 12px;
+    color: #777777;
+    margin-top: 12px;
+  }
+  .footer-credit a {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    color: var(--color-amber);
+    font-weight: 600;
+    border-bottom: 1px solid rgba(239, 188, 33, 0.4);
+  }
+  .footer-credit a:hover { border-bottom-color: var(--color-amber); }
 
   /*----------footer fix-----------*/
 
@@ -346,14 +363,13 @@
 }
 
 .btn-spotify {
-  background-color: #1DB954;
+  background: linear-gradient(15deg, var(--color-amber) 15%, #a07800 100%);
   color: #ffffff;
 }
 
 .btn-youtube {
-  background-color: #FF0000;
+  background: linear-gradient(200deg, #2a2a2a 0%, var(--color-amber) 100%);
   color: #ffffff;
-  
 }
 
 .btn-amber {
@@ -959,3 +975,103 @@
 @media (max-width: 600px) {
   .form-card { padding: 28px 20px; }
 }
+
+
+/*----------Nav drop down menu----------*/
+.nav-dropdown { position: relative; }
+
+.nav-dropdown-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 500;
+  color: #ffffff;
+  opacity: 0.8;
+  padding: 0;
+  transition: opacity 0.2s ease, color 0.2s ease;
+}
+.nav-dropdown-trigger:hover,
+.nav-dropdown.open .nav-dropdown-trigger {
+  opacity: 1;
+  color: var(--color-amber);
+}
+.nav-dropdown-trigger svg { transition: transform 0.2s ease; }
+.nav-dropdown.open .nav-dropdown-trigger svg { transform: rotate(180deg); }
+
+.nav-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 16px);
+  right: 0;
+  background-color: var(--color-dark);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  padding: 8px;
+  min-width: 160px;
+  flex-direction: column;
+  gap: 4px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+.nav-dropdown.open .nav-dropdown-menu { display: flex; }
+.nav-dropdown-menu a {
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  white-space: nowrap;
+}
+.nav-dropdown-menu a:hover { background-color: rgba(255, 255, 255, 0.06); }
+
+@media (max-width: 768px) {
+  .nav-dropdown-trigger { display: none; }
+  .nav-dropdown-menu {
+    display: flex;
+    position: static;
+    background: none;
+    border: none;
+    padding: 0;
+    box-shadow: none;
+    gap: 18px;
+  }
+}
+
+
+/* ---------- Featured Guests page ---------- */
+.guests-section { background-color: var(--color-bg); }
+.guest-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+}
+.guest-card {
+  background-color: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 28px 24px;
+  text-align: center;
+}
+.guest-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 16px auto;
+  border: 3px solid var(--color-amber);
+}
+.guest-episode-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-amber);
+  margin-bottom: 10px;
+}
+.guest-card h3 { font-size: 18px; margin-bottom: 4px; }
+.guest-role { font-size: 13px; color: var(--color-text-muted); margin-bottom: 12px; }
+.guest-bio { font-size: 14px; color: var(--color-text-muted); margin-bottom: 18px; line-height: 1.6; }
+
