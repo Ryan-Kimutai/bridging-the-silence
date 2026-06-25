@@ -844,6 +844,14 @@
 .exhibition-cta-card h3 { color: #ffffff; font-size: 20px; margin-bottom: 10px; }
 .exhibition-cta-card p { color: #aaaaaa; font-size: 14px; margin-bottom: 24px; line-height: 1.6; }
 
+
+/* Exhibition empty states */
+.exhibition-empty-state { text-align: center; padding: 72px 24px; }
+.exhibition-empty-icon { font-size: 28px; color: var(--color-amber); margin-bottom: 20px; opacity: 0.6; }
+.exhibition-empty-title { font-family: var(--font-heading); font-size: 20px; color: var(--color-text); margin-bottom: 10px; }
+.exhibition-empty-sub { font-size: 14px; color: var(--color-text-muted); max-width: 380px; margin: 0 auto; line-height: 1.6; }
+
+
 /* ---------- Exhibition: Gallery & Story Wall (mosaic) ---------- */
 .exhibition-gallery { background-color: var(--color-bg); }
 .exhibition-stories { background-color: #f0efed; }
@@ -1065,6 +1073,64 @@
 .guest-card h3 { font-size: 18px; margin-bottom: 4px; }
 .guest-role { font-size: 13px; color: var(--color-text-muted); margin-bottom: 12px; }
 .guest-bio { font-size: 14px; color: var(--color-text-muted); margin-bottom: 18px; line-height: 1.6; }
+
+/*---------- Customized Guest cards ---------- */
+/* Guest card: Tula */
+.guest-card--tula {
+  background-color: #F0E6D8;
+  border: 1px solid #E8D9C8;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  padding: 0;
+}
+
+/* paint wash top-right corner */
+.guest-card--tula::before {
+  content: '';
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 280px;
+  height: 180px;
+  background: radial-gradient(ellipse at center, rgba(196, 104, 26, 0.18) 0%, rgba(196, 104, 26, 0.06) 50%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(18px);
+  pointer-events: none;
+}
+
+/* paint wash bottom-left corner */
+.guest-card--tula::after {
+  content: '';
+  position: absolute;
+  bottom: -30px;
+  left: -30px;
+  width: 300px;
+  height: 160px;
+  background: radial-gradient(ellipse at center, rgba(90, 45, 10, 0.12) 0%, rgba(90, 45, 10, 0.05) 50%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(22px);
+  pointer-events: none;
+}
+
+.guest-card-noise {
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+}
+
+.guest-card-content { position: relative; z-index: 1; padding: 32px 28px; }
+.guest-photo--tula { border-color: #C4681A; box-shadow: 0 0 0 4px rgba(196,104,26,0.15); }
+.guest-episode-tag--tula { color: #C4681A; }
+.guest-name--tula { color: #3C2010; font-size: 20px; margin-bottom: 4px; }
+.guest-role--tula { color: #7A5538; font-size: 13px; margin-bottom: 16px; }
+.guest-bio--tula { color: #5C3A20; font-size: 14px; line-height: 1.7; margin-bottom: 24px; text-align: left; }
+.guest-btn--tula { background: transparent; border: 1.5px solid #C4681A; color: #3C2010; font-size: 13px; padding: 10px 20px; border-radius: 4px; transition: background 0.2s ease, color 0.2s ease; }
+.guest-btn--tula:hover { background: #C4681A; color: #fff; opacity: 1; }
 
 
 /* ---------- Merch Coming Soon Page ---------- */
