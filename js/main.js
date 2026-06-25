@@ -55,7 +55,25 @@ document.addEventListener('DOMContentLoaded', async () => {
       }
     });
   }
+// Auto-hide navbar on scroll down, reveal on scroll up
+const siteHeader = document.querySelector('.site-header');
+let lastScrollY = window.scrollY;
+const hideThreshold = 80;
 
+window.addEventListener('scroll', () => {
+  const currentScrollY = window.scrollY;
+  const menuIsOpen = nav?.classList.contains('open') || dropdown?.classList.contains('open');
+
+  if (menuIsOpen || currentScrollY <= hideThreshold) {
+    siteHeader.classList.remove('nav-hidden');
+  } else if (currentScrollY > lastScrollY) {
+    siteHeader.classList.add('nav-hidden');   // scrolling down
+  } else {
+    siteHeader.classList.remove('nav-hidden'); // scrolling up
+  }
+
+  lastScrollY = currentScrollY;
+});
   // Auto-fill the copyright year
   const yearSpan = document.getElementById('year');
 
