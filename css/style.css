@@ -846,11 +846,26 @@
 
 
 /* Exhibition empty states */
-.exhibition-empty-state { text-align: center; padding: 72px 24px; }
-.exhibition-empty-icon { font-size: 28px; color: var(--color-amber); margin-bottom: 20px; opacity: 0.6; }
+.exhibition-empty-state {
+  text-align: center;
+  padding: 64px 24px;
+  background-color: rgba(0, 0, 0, 0.025);
+  border-radius: 8px;
+}
+.exhibition-empty-icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 20px auto;
+  border-radius: 50%;
+  background-color: rgba(239, 188, 33, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: var(--color-amber);
+}
 .exhibition-empty-title { font-family: var(--font-heading); font-size: 20px; color: var(--color-text); margin-bottom: 10px; }
 .exhibition-empty-sub { font-size: 14px; color: var(--color-text-muted); max-width: 380px; margin: 0 auto; line-height: 1.6; }
-
 
 /* ---------- Exhibition: Gallery & Story Wall (mosaic) ---------- */
 .exhibition-gallery { background-color: var(--color-bg); }
