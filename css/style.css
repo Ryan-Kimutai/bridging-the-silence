@@ -1161,6 +1161,55 @@
 .guest-btn--tula:hover { background: #C4681A; color: #fff; opacity: 1; }
 
 
+/* Guest card: Keith */
+.guest-card--keith {
+  background-color: #0F1E38;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  padding: 0;
+}
+
+/* gold glow top-left */
+.guest-card--keith::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 260px;
+  height: 180px;
+  background: radial-gradient(ellipse at center, rgba(212, 160, 23, 0.18) 0%, rgba(212, 160, 23, 0.06) 50%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(20px);
+  pointer-events: none;
+}
+
+/* deep navy glow bottom-right */
+.guest-card--keith::after {
+  content: '';
+  position: absolute;
+  bottom: -40px;
+  right: -40px;
+  width: 280px;
+  height: 160px;
+  background: radial-gradient(ellipse at center, rgba(30, 60, 120, 0.35) 0%, rgba(30, 60, 120, 0.1) 50%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(24px);
+  pointer-events: none;
+}
+
+.guest-card-content--keith { position: relative; z-index: 1; padding: 32px 28px; }
+.guest-photo--keith { border-color: #D4A017; box-shadow: 0 0 0 4px rgba(212,160,23,0.18); }
+.guest-episode-tag--keith { color: #D4A017; }
+.guest-name--keith { color: #ffffff; font-size: 20px; margin-bottom: 4px; }
+.guest-role--keith { color: #8BA3C7; font-size: 13px; margin-bottom: 16px; }
+.guest-bio--keith { color: #B8C8DE; font-size: 14px; line-height: 1.7; margin-bottom: 24px; text-align: left; }
+.guest-btn--keith { background: transparent; border: 1.5px solid #D4A017; color: #D4A017; font-size: 13px; padding: 10px 20px; border-radius: 4px; transition: background 0.2s ease, color 0.2s ease; }
+.guest-btn--keith:hover { background: #D4A017; color: #0F1E38; opacity: 1; }
+
+
 /* ---------- Merch Coming Soon Page ---------- */
 .coming-soon-section {
   background-color: var(--color-bg);
@@ -1182,3 +1231,4 @@
   max-width: 480px;
   margin: 0 auto 28px auto;
 }
+
