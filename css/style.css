@@ -175,6 +175,14 @@
     color: var(--color-amber);
   }
   
+  .footer-disclaimer {
+    font-size: 11px;
+    color: #666666;
+    max-width: 480px;
+    margin: 0 auto 12px auto;
+    line-height: 1.6;
+  }
+
   .footer-copy {
     font-size: 13px;
     color: #999999;
