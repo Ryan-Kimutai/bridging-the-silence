@@ -1162,7 +1162,7 @@
 }
 
 .guest-card-content { position: relative; z-index: 1; padding: 32px 28px; }
-.guest-photo--tula { border-color: #C4681A; box-shadow: 0 0 0 4px rgba(196,104,26,0.15); }
+.guest-photo--tula { border-color: #C4681A; box-shadow: 0 0 0 4px rgba(196,104,26,0.15);  object-position: center 5%;}
 .guest-episode-tag--tula { color: #C4681A; }
 .guest-name--tula { color: #3C2010; font-size: 20px; margin-bottom: 4px; }
 .guest-role--tula { color: #7A5538; font-size: 13px; margin-bottom: 16px; }
