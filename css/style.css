@@ -1210,7 +1210,7 @@
 }
 
 .guest-card-content--keith { position: relative; z-index: 1; padding: 32px 28px; }
-.guest-photo--keith { border-color: #D4A017; box-shadow: 0 0 0 4px rgba(212,160,23,0.18); }
+.guest-photo--keith{border-color:#D4A017;box-shadow:0 0 0 4px rgba(212,160,23,.18);object-position:center 5%;}
 .guest-episode-tag--keith { color: #D4A017; }
 .guest-name--keith { color: #ffffff; font-size: 20px; margin-bottom: 4px; }
 .guest-role--keith { color: #8BA3C7; font-size: 13px; margin-bottom: 16px; }
