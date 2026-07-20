@@ -123,7 +123,7 @@ When a new episode drops:
 
 ## Built By
 
-**Ryan Kimutai** — [LinkedIn](https://www.linkedin.com/in/ryan-korir-1b0a85286/)
+**Ryan Kimutai** — [LinkedIn](https://www.linkedin.com/in/ryan-korir-0614b03ba/)
 
 ---
 
