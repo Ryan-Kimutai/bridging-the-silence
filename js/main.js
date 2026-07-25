@@ -36,6 +36,20 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
   }
 
+  // Exhibition banner dismiss
+  const banner = document.getElementById('exhibition-banner');
+  const bannerClose = document.getElementById('banner-close');
+  if (banner && bannerClose) {
+    // Check if already dismissed this session
+    if (sessionStorage.getItem('bannerDismissed')) {
+      banner.classList.add('hidden');
+    }
+    bannerClose.addEventListener('click', () => {
+      banner.classList.add('hidden');
+      sessionStorage.setItem('bannerDismissed', 'true');
+    });
+  }
+  
   // Nav "More" dropdown
   const dropdown = document.querySelector('.nav-dropdown');
   const dropdownTrigger = document.querySelector('.nav-dropdown-trigger');

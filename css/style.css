@@ -1240,4 +1240,39 @@
   max-width: 480px;
   margin: 0 auto 28px auto;
 }
+/* ---------- Exhibition Announcement Banner ---------- */
+.exhibition-banner {
+  background-color: var(--color-amber);
+  color: var(--color-dark);
+  padding: 10px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  position: relative;
+  z-index: 101;
+}
+.exhibition-banner p { margin: 0; text-align: center; }
+.exhibition-banner a {
+  color: var(--color-dark);
+  font-weight: 700;
+  border-bottom: 1.5px solid var(--color-dark);
+}
+.exhibition-banner a:hover { opacity: 0.7; }
+.banner-close {
+  position: absolute;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: var(--color-dark);
+  opacity: 0.6;
+  line-height: 1;
+  padding: 4px;
+}
+.banner-close:hover { opacity: 1; }
+.exhibition-banner.hidden { display: none; }
 
