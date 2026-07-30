@@ -1219,6 +1219,54 @@
 .guest-btn--keith:hover { background: #D4A017; color: #0F1E38; opacity: 1; }
 
 
+/* Guest card: Anne */
+.guest-card--anne {
+  background-color: #FCF2F5;
+  border: 1px solid #F0D9E0;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  padding: 0;
+}
+
+/* deep crimson glow top-right */
+.guest-card--anne::before {
+  content: '';
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 260px;
+  height: 180px;
+  background: radial-gradient(ellipse at center, rgba(140, 20, 50, 0.14) 0%, rgba(140, 20, 50, 0.05) 50%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(20px);
+  pointer-events: none;
+}
+
+/* soft blush glow bottom-left */
+.guest-card--anne::after {
+  content: '';
+  position: absolute;
+  bottom: -30px;
+  left: -30px;
+  width: 240px;
+  height: 160px;
+  background: radial-gradient(ellipse at center, rgba(200, 80, 100, 0.1) 0%, rgba(200, 80, 100, 0.04) 50%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(22px);
+  pointer-events: none;
+}
+
+.guest-card-content--anne { position: relative; z-index: 1; padding: 32px 28px; }
+.guest-photo--anne { border-color: #8C1432; box-shadow: 0 0 0 4px rgba(140, 20, 50, 0.12); }
+.guest-episode-tag--anne { color: #8C1432; }
+.guest-name--anne { color: #2D0A10; font-size: 20px; margin-bottom: 4px; }
+.guest-role--anne { color: #7A3040; font-size: 13px; margin-bottom: 16px; }
+.guest-bio--anne { color: #5C2030; font-size: 14px; line-height: 1.7; margin-bottom: 24px; text-align: left; }
+.guest-btn--anne { background: transparent; border: 1.5px solid #8C1432; color: #2D0A10; font-size: 13px; padding: 10px 20px; border-radius: 4px; transition: background 0.2s ease, color 0.2s ease; }
+.guest-btn--anne:hover { background: #8C1432; color: #fff; opacity: 1; }
+
 /* ---------- Merch Coming Soon Page ---------- */
 .coming-soon-section {
   background-color: var(--color-bg);
