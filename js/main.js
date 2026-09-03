@@ -49,6 +49,26 @@ document.addEventListener('DOMContentLoaded', async () => {
       sessionStorage.setItem('bannerDismissed', 'true');
     });
   }
+
+    // Exhibition popup — shows after 2 seconds, every visit
+    const overlay = document.getElementById('exhibitionOverlay');
+    const popupClose = document.getElementById('popupClose');
+  
+    if (overlay) {
+      setTimeout(() => {
+        overlay.classList.add('active');
+      }, 2000);
+  
+      popupClose.addEventListener('click', () => {
+        overlay.classList.remove('active');
+      });
+  
+      overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) {
+          overlay.classList.remove('active');
+        }
+      });
+    }
   
   // Nav "More" dropdown
   const dropdown = document.querySelector('.nav-dropdown');
